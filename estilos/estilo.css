@@ -13,30 +13,39 @@ body {
 
 .container {
   margin: 8% auto;
-  width: 45%;
+  width: 800px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 1px;
   border-radius: 5px;
   background-color: rgb(38, 63, 77);
 }
 
 .new-task-add {
-  width: 90%;
-  margin: 20px;
-  padding: 20px;
+  width: 80%;
+  margin: 10px;
+  height: 3rem;
+  padding: 1.5rem;
+  text-align: center;
   display: flex;
   flex-direction: row;
   gap: 20px;
   background-color: rgb(9, 30, 54);
 }
+.titulo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2px;
+  gap: 10px;
+  align-items: center;
+}
 
 #titulo-task-list {
   color: white;
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 #p-task-list {
@@ -47,9 +56,35 @@ body {
 #type-new-task {
   background-color: rgb(255, 255, 255, 0.15);
   border-radius: 4px;
-  padding: 10px;
+  padding: 1rem;
+  font-size: 18px;
   width: 90%;
+  outline: none; /*descobri agr q essa função aqui tira aquela borda de quando o item ta selecionado*/
   color: white;
+  text-align: center;
+  border: none;
 }
-.btn-add-task {
+#type-new-task::placeholder {
+  color: gray;
+}
+#btn-add-task {
+  background-color: rgb(4, 71, 194);
+  width: 25%;
+  font-size: 1rem;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+#btn-add-task:hover {
+  background-color: rgb(4, 71, 194, 0.8);
+  transform: scale(1.05);
+}
+.task-list {
+  background-color: rgb(9, 30, 54);
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

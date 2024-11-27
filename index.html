@@ -8,13 +8,22 @@
   </head>
   <body>
     <section class="container">
-      <h1 id="titulo-task-list">Task List</h1>
-      <p id="p-task-list">Adicione suas tarefas...</p>
+      <section class="titulo">
+        <h1 id="titulo-task-list">Task List</h1>
+        <p id="p-task-list">Adicione suas tarefas...</p>
+      </section>
       <div class="new-task-add">
-        <input type="text" placeholder="Adicione sua tarefa..." id="type-new-task" />
+        <input
+          type="text"
+          placeholder="Adicione sua tarefa..."
+          id="type-new-task"
+        />
         <button id="btn-add-task">Adicionar</button>
       </div>
-      <div class="task-list"></div>
+      <section class="task-list">
+        <div class="task-item"></div>
+      </section>
     </section>
+    <script src="javascript.js"></script>
   </body>
 </html>
