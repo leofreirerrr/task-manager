@@ -13,7 +13,7 @@ body {
 
 .container {
   margin: 8% auto;
-  width: 800px;
+  width: 45%;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -27,7 +27,7 @@ body {
 .new-task-add {
   width: 80%;
   margin: 10px;
-  height: 3rem;
+  height: auto;
   padding: 1.5rem;
   text-align: center;
   display: flex;
@@ -83,8 +83,29 @@ body {
 }
 .task-list {
   background-color: rgb(9, 30, 54);
-  width: 90%;
+  width: 80%;
+  height: 5px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
   gap: 10px;
+  padding: 1.5rem;
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 80%;
+  }
+
+  .new-task-add {
+    flex-direction: column;
+  }
+
+  #type-new-task {
+  }
+
+  #btn-add-task {
+    width: 100%;
+  }
 }
