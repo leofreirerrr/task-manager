@@ -37,9 +37,12 @@
 // animal.speak();
 // dog.speak();
 
-const taskName = document.querySelector("#type-new-task");
 const btnTaskAdd = document.querySelector("#btn-add-task");
+let taskList = document.querySelector(".task-list");
 
 btnTaskAdd.onclick = function () {
-  const taskName = document.querySelector("#type-new-task");
-}
+  let taskName = document.querySelector("#type-new-task").value;
+  console.log(taskName);
+  taskList.innerHTML += `<section class = "task-item"> <p> ${taskName}  <i class="fa-solid fa-trash"></i></p></section>`
+};
+
