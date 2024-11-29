@@ -37,12 +37,9 @@
 // animal.speak();
 // dog.speak();
 
-const addTaskButton = document.querySelector("#btn-add-task");
-const inputTask = document.querySelector("type-new-task");
+const taskName = document.querySelector("#type-new-task");
+const btnTaskAdd = document.querySelector("#btn-add-task");
 
-addTaskButton.addEventListener("click", function (e) {
-  e.preventDefault();
-
-  const nameTask = inputTask.value;
-  console.log(nameTask);
-});
+btnTaskAdd.onclick = function () {
+  const taskName = document.querySelector("#type-new-task");
+}
