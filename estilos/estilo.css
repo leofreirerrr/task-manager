@@ -100,12 +100,21 @@ body {
   flex-direction: row;
   border-color: white;
   padding: 15px;
-
+}
+.task-item p{
+  align-content: center;
 }
 
-.fa-trash {
+.task-item i {
   background-color: red;
   padding: 10px;
+  justify-content: right;
+  cursor: pointer;
+  margin-left: auto;
+  transition: all 0.5 ease;
+}
+.task-item i:hover{
+  transform: scale(1.05);
 }
 
 @media (max-width: 820px) {

@@ -1,48 +1,23 @@
-// class Person {
-//   constructor(firstName, lastName, age) {
-//     (this.firstName = firstName),
-//     (this.lastName = lastName),
-//     (this.age = age);
-//   }
-//   getFullName() {
-//     console.log(`${this.firstName} ${this.lastName}`);
-//   }
-// }
-
-// const person = new Person("jane", "Doe", 40);
-// person.getFullName();
-
-// class Animal {
-//   constructor(name) {
-//     this.name = name;
-//   }
-//   speak() {
-//     console.log(`${this.name} made some noise`);
-//   }
-// }
-
-// class Dog extends Animal {
-//   constructor(name) {
-//     super(name);
-//   }
-
-//   speak() {
-//     console.log(`${this.name} barked`)
-//   }
-// }
-
-// const animal = new Animal("Simba");
-// const dog = new Dog ("Bob");
-
-// animal.speak();
-// dog.speak();
-
 const btnTaskAdd = document.querySelector("#btn-add-task");
 let taskList = document.querySelector(".task-list");
+let taskInput = document.querySelector("#type-new-task");
+const btnDelete = document.querySelector(".task-item i");
+let taskItem = document.querySelector(".task-item p");
+
+let tasks = [];
+
+function getTaskName() {
+  const taskName = taskInput.value;
+  tasks.push(taskName);
+  taskInput.value = "";
+  return taskName;
+}
+function deleteTask() {}
 
 btnTaskAdd.onclick = function () {
-  let taskName = document.querySelector("#type-new-task").value;
-  console.log(taskName);
-  taskList.innerHTML += `<section class = "task-item"> <p> ${taskName}  <i class="fa-solid fa-trash"></i></p></section>`
+  const taskName = getTaskName();
+  taskList.innerHTML += `<section class = "task-item"> 
+  <p> ${taskName}</p> 
+  <i class="fa-solid fa-trash"></i>
+  </section>`;
 };
-
