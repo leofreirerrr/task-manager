@@ -12,11 +12,14 @@ function getTaskName() {
   taskInput.value = "";
   return taskName;
 }
-function deleteTask() {}
+function deleteTask(taskName) {
+  let taskItem = document.querySelector(".task-item p");
+}
 
 btnTaskAdd.onclick = function () {
   const taskName = getTaskName();
-  taskList.innerHTML += `<section class = "task-item"> 
+  taskList.innerHTML +=
+  `<section class = "task-item">
   <p> ${taskName}</p> 
   <i class="fa-solid fa-trash"></i>
   </section>`;
