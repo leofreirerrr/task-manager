@@ -12,9 +12,18 @@ function getTaskName() {
   taskInput.value = "";
   return taskName;
 }
-function deleteTask(taskName) {
-  let taskItem = document.querySelector(".task-item p");
-}
+taskList.addEventListener("click", (event)=> {
+  if (event.target.classList.contains("fa-trash")) {
+    const vasco = event.target.closest(".task-item")
+    console.log(vasco)
+    vasco.remove()
+    const textRemove = vasco.textContent.trim()
+    index = tasks.indexOf(textRemove)
+    tasks.splice(index, 1)
+    console.log(tasks)
+  }
+})
+
 
 btnTaskAdd.onclick = function () {
   const taskName = getTaskName();
@@ -23,4 +32,5 @@ btnTaskAdd.onclick = function () {
   <p> ${taskName}</p> 
   <i class="fa-solid fa-trash"></i>
   </section>`;
+  console.log(tasks)
 };
