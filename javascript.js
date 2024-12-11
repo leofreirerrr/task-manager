@@ -3,6 +3,7 @@ let taskList = document.querySelector(".task-list");
 let taskInput = document.querySelector("#type-new-task");
 const btnDelete = document.querySelector(".task-item i");
 let taskItem = document.querySelector(".task-item p");
+const bntDeleteAll = document
 
 let tasks = [];
 
@@ -31,6 +32,9 @@ btnTaskAdd.onclick = function () {
   `<section class = "task-item">
   <p> ${taskName}</p> 
   <i class="fa-solid fa-trash"></i>
-  </section>`;
+  </section>
+  <section class="delete-all" `;
+
+  const deleteall = 
   console.log(tasks)
 };
