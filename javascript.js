@@ -7,7 +7,7 @@ const btnDeleteAll = document.querySelector("#btn-delete-all");
 let tasks = [];
 
 function mostrarLista() {
-  console.log(tasks)
+  console.log(tasks);
 }
 
 function verifyInput() {
@@ -21,7 +21,7 @@ function verifyInput() {
 function deleteALL() {
   taskList.innerHTML = "";
   tasks.splice(0, tasks.length);
-  mostrarLista()
+  mostrarLista();
 
   if (tasks.length <= 0) {
     btnDeleteAll.style.display = "none";
@@ -41,7 +41,7 @@ taskList.addEventListener("click", (event) => {
     const textRemove = vasco.textContent.trim();
     index = tasks.indexOf(textRemove);
     tasks.splice(index, 1);
-    mostrarLista()
+    mostrarLista();
 
     if (tasks.length <= 0) {
       btnDeleteAll.style.display = "none";
@@ -57,7 +57,7 @@ btnTaskAdd.onclick = function () {
     <i class="fa-solid fa-trash"></i>
     </section>`;
     btnDeleteAll.style.display = "flex";
-    mostrarLista()
+    mostrarLista();
   }
 };
 
