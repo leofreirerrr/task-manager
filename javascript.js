@@ -6,12 +6,25 @@ let taskItem = document.querySelector(".task-item p");
 const btnDeleteAll = document.querySelector("#btn-delete-all");
 let tasks = [];
 
+function mostrarLista() {
+  console.log(tasks)
+}
+
 function verifyInput() {
   if (taskInput.value.trim() == "") {
     taskInput.style.border = "solid red";
-    taskInput.style.
   } else {
     return true;
+  }
+}
+
+function deleteALL() {
+  taskList.innerHTML = "";
+  tasks.splice(0, tasks.length);
+  mostrarLista()
+
+  if (tasks.length <= 0) {
+    btnDeleteAll.style.display = "none";
   }
 }
 
@@ -24,12 +37,12 @@ function getTaskName() {
 taskList.addEventListener("click", (event) => {
   if (event.target.classList.contains("fa-trash")) {
     const vasco = event.target.closest(".task-item");
-    console.log(vasco);
     vasco.remove();
     const textRemove = vasco.textContent.trim();
     index = tasks.indexOf(textRemove);
     tasks.splice(index, 1);
-    console.log(tasks);
+    mostrarLista()
+
     if (tasks.length <= 0) {
       btnDeleteAll.style.display = "none";
     }
@@ -44,6 +57,10 @@ btnTaskAdd.onclick = function () {
     <i class="fa-solid fa-trash"></i>
     </section>`;
     btnDeleteAll.style.display = "flex";
-    console.log(btnDeleteAll);
+    mostrarLista()
   }
+};
+
+btnDeleteAll.onclick = function () {
+  deleteALL();
 };
